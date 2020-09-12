@@ -10,3 +10,12 @@ TEST_CASE("Test sum_numbers function")
 {
 	REQUIRE(sum_numbers(5, 5) == 10);
 }
+
+TEST_CASE("Test Multiply Numbers")
+{
+	REQUIRE(multiply_numbers(10) == 50);
+}
+TEST_CASE("Test Multiply Numbers with Parameter 2")
+{
+	REQUIRE(multiply_numbers(2) == 10);
+}
