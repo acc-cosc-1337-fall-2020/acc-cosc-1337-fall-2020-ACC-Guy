@@ -18,7 +18,7 @@ double get_sales_tax_amount(double meal_amount)
 	}
 
 
-double get_tip_amount(double meal_amount, double tip_amount, double tax_amount)
+double get_tip_amount(double meal_amount, double tip_amount)
 {
 		double total_variable = tip_amount  + meal_amount;
 
