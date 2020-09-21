@@ -23,7 +23,7 @@ int main()
 
 	std::cin>>tip_amount;
 
-	total = get_tip_amount(meal_amount, tip_amount) + tax_amount;
+	total = meal_amount + get_tip_amount(meal_amount, tip_amount) + tax_amount;
 	
 	std::cout<<"Meal Amount: "<<meal_amount<<'\n';
 
