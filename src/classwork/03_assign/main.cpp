@@ -39,5 +39,7 @@ int main()
 
 	cout<<"The student's grade is " << return_val_grade_if <<" via the If Else grading method.\n";
 
+	return 0;
+
 }
 
