@@ -2,7 +2,12 @@
 #include "catch.hpp"
 #include "loops.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
+// TEST_CASE("Verify Test Configuration", "verification") {
+// 	REQUIRE(true == true);
+// }
 
+TEST_CASE("Verify Prototype function"){
+	REQUIRE(prototype(3) == 6);
+	REQUIRE(prototype(4) == 24);
+	REQUIRE(prototype(5) == 120);
+}
