@@ -6,35 +6,13 @@ using namespace std;
 
 int prototype(int num)
 {
-    int numbers[num];
-    const int placeHolder = num;
+    int result = 1;
 
-    //The for loop records the decremental values 
-    //of the integer that was entered in by the user
-    for(int i = num; i > 0; i--)
+    for(int num2 = 1; num2<= num; num2++)
     {
-        int result;
-        numbers[i] = i;
-
-        //Test used to verify that the array was
-        //saving the correct values in the first loop. 
-        //cout<<numbers[num]<<"\n";
-
-        //The if statement takes the array once it is less than two
-        //and begins to multiply the stored values in a nested for loop.  
-        if(i < 2)
-        {   
-
-            for(int num2 = placeHolder; num2 > 0; num2--)
-            {
-                result *= numbers[num2];      
-            }
-
-            return result;
-         }
-    
-
+        result *= num2;
     }
 
+    return result;
 }
 
