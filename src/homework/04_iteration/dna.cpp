@@ -68,24 +68,24 @@ string get_dna_complement(string input)
 
     for (size_t i = 0; i < len; i++)
     {
-        if(replace_characters[i] == 'G')
-            replace_characters[i] = 'C';
-        else if(replace_characters[i] == 'g')
-            replace_characters[i] = 'c';
-        else if(replace_characters[i] == 'A')
-            replace_characters[i] = 'T';
-        else if(replace_characters[i] == 'a')
-            replace_characters[i] = 't';
-        else if(replace_characters[i] == 'C')
-            replace_characters[i] = 'G';
-        else if(replace_characters[i] == 'c')
-            replace_characters[i] = 'g';
-        else if(replace_characters[i] == 'T')
-            replace_characters[i] = 'A';
-        else if(replace_characters[i] == 't')
-            replace_characters[i] = 'a';
+        if(local_string_variable[i] == 'G')
+            local_string_variable[i] = 'C';
+        else if(local_string_variable[i] == 'g')
+            local_string_variable[i] = 'c';
+        else if(local_string_variable[i] == 'A')
+            local_string_variable[i] = 'T';
+        else if(local_string_variable[i] == 'a')
+            local_string_variable[i] = 't';
+        else if(local_string_variable[i] == 'C')
+            local_string_variable[i] = 'G';
+        else if(local_string_variable[i] == 'c')
+            local_string_variable[i] = 'g';
+        else if(local_string_variable[i] == 'T')
+            local_string_variable[i] = 'A';
+        else if(local_string_variable[i] == 't')
+            local_string_variable[i] = 'a';
     }
 
-    return replace_characters;
+    return local_string_variable;
 
 }

@@ -15,19 +15,21 @@ user enters a y or Y.
 */
 int main() 
 {
+char YesChoice;
+
+	do
+	{
+
 	string user_input;
 	int choice;
-	char YesChoice = 'n';
+	//char YesChoice = 'n';
 
-	cout<<"Sup bruh... \nEnter 1 to get the GC Content \nOrrrrrr Enter 2 to get DNA Complement.";
+	cout<<"Sup bruh... \nEnter 1 to get the GC Content \nOrrrrrr Enter 2 to get DNA Complement.\n";
 	cin>>choice;
 
 	cout<<"Enter your baby daddy's DNA string. \n";
 	cin>>user_input;
 
-
-	while(YesChoice != 'y' || YesChoice != 'Y')
-	{
 	
 	if(choice == 1)
 	{
@@ -39,9 +41,13 @@ int main()
 	string replace_characters = get_dna_complement(user_input);
 	cout<<replace_characters<<"\n";
 	}
-	else
+	else 
 	break;
-	}
+	
+	cout<<"Would you like to exit this nightmare?\n";
+	cin>>YesChoice;
 
+	}
+	while(YesChoice != 'y' && YesChoice != 'Y');
 	return 0;
 }
