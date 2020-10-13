@@ -16,5 +16,16 @@ void BankAccount::deposit(int amount)
          balance -= amount;
      }
 
-
  }
+
+ void display_bank_account(BankAccount account)
+ {
+    
+ }
+
+//FREE FUNCTIONS-NOT CLASS FUNCTIONS
+BankAccount get_bank_account()
+{
+    BankAccount(500);
+    return Account;
+}
