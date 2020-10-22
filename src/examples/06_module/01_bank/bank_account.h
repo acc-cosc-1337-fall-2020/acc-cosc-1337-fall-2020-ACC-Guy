@@ -1,35 +1,47 @@
 //bank_account.h
-class BankAccount
-{
+#include<iostream>
 
-public: //access specifier makes class function available to users of the class
+ class BankAccount
+      { 
+      public: 
+      //access specifier-makes class function available to users of the class 
+     BankAccount() =  default; 
+      //user defined default constructor 
     
-    /* CONSTRUCTOR OVERLOADING */
-    BankAccount() : balance(0){}; //default constructor --synthesized
-    //if you create a constructor with at least one parameter, the default constructor does not 
-    //get created.
-    BankAccount(int b) : balance(b){}//user created constructor
+      explicit BankAccount(int b); 
+      //user created constructor 
+           
+      int get_balance() const 
+       { 
+      return balance;
+      } 
+      //inline class function-const read only for class variables 
+     
+      void deposit(int amount);
 
-    /*DELEGATING CONSTRUCTOR*/
-    //use the constructor to call another constructor
-    //This prevents you from adding the same logic check to several constructors. 
-    //since you only do this once. 
-    //For example
-    //BankAccount() : BankAccount(0){}
+      void withdraw(int amount); 
 
+      static int get_bank_balance()
+      { 
+      return bank_balance;
+      } 
 
-    int get_balance(){return balance;} //inline class function
+      friend void friend_display_balance(const BankAccount& account);
 
-    void deposit(int amount);
+      //THIS IS A FREE FUNCTION! NOT PART OF THE CLASS 
+      //friend void BranchBank::update_balance(int b);
 
-    void withdraw(int amount);
+    //   friend std::ostream& operator<<(std::ostream& out, const BankAccount& a);
 
-  
-private://access specifier - hides variables from users of the class (meaning you're in main but can't use) 
-    int balance{0};
+    //   friend std::istream& operator>>(std::istream& in, BankAccount& a); 
 
-};//don't forget the semicolon!!! for classes
+    //   friend BankAccount operator+(const BankAccount& a1, const BankAccount& a2); 
+ 
+      private: 
+      //access specifier-hides variables from users of the class 
+           
+      int balance{0}; 
+           
+      static int bank_balance; 
 
-  void display_bank_account(BankAccount account);
-
-  BankAccount get_bank_account;
+      };
