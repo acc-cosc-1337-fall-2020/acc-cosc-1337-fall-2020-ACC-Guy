@@ -5,6 +5,8 @@ using std::cout; using std::cin;
 
 int main()
 {	
+	CheckingAccount a;
+
 	BankAccount Broke;
 	Broke.deposit(500);
 	Broke.deposit(1);
