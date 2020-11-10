@@ -6,14 +6,29 @@ using std::cout; using std::cin; using std::string;
 
 int main() 
 {	
-	
-	Tic_Tac_Toe t;
-	t.display_board();
 
 	string input;
+
+	do
+	{
+	
+	/*** Player chooses X or O ***/
 	cout<<"Please enter in a value of X or O\n";
 	cin>>input;
 
+	/*** Validation of player input ***/
+	if(input == "X" || input ==  "O")
+    {
+        string player = input;
+	}
+	else
+    {
+        cout<<"This is not a valid entry.\n"<<"Please enter in a valid value.\n";	
+    }  
+	} while (input != "X" && input !=  "O");
+
+	/*** Initialize Tic Tac Toe Object. ***/
+	Tic_Tac_Toe t;
 	t.start_game(input);
 
 	return 0;

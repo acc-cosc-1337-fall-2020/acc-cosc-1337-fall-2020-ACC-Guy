@@ -23,7 +23,7 @@ private: //access specifier - Hides variables from users of the class.
     void set_next_player();
     bool check_board_full();
     void clear_board();
-    vector<vector <string>> peg = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}};
+    vector<string> peg{9," "};
 };
 
 // tic_tac_toe::tic_tac_toe(/* args */)
