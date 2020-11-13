@@ -1,7 +1,6 @@
 #include<iostream>
 #include "tic_tac_toe.h"
 
-//using std::cout; using std::endl; using std::vector;
 using std::cout; using std::cin; using std::string;
 
 int main() 
@@ -11,12 +10,9 @@ int main()
 
 	do
 	{
-	
-	/*** Player chooses X or O ***/
 	cout<<"Please enter in a value of X or O\n";
 	cin>>input;
 
-	/*** Validation of player input ***/
 	if(input == "X" || input ==  "O")
     {
         string player = input;
@@ -27,9 +23,23 @@ int main()
     }  
 	} while (input != "X" && input !=  "O");
 
-	/*** Initialize Tic Tac Toe Object. ***/
 	Tic_Tac_Toe t;
 	t.start_game(input);
+	
+	int position;
+	
+	do{
+    do
+    {
+       cout<<"Enter a position from 1 to 9.\n";  
+       cin>>position;
+	   
+    }
+    while(position > 10 || position < 0); 
+
+	t.mark_board(position);
+	t.display_board();
+	}while(!t.game_over());
 
 	return 0;
 }
