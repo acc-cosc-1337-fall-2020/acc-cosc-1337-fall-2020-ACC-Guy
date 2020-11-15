@@ -7,7 +7,16 @@ int main()
 {	
 
 	string input;
+	string answer;
 
+	do
+	{
+	
+	cout<<"Would you like to play a game?\n";
+	cin>>answer;
+	
+	if(answer == "Y" || answer == "y")
+	{
 	do
 	{
 	cout<<"Please enter in a value of X or O\n";
@@ -40,6 +49,26 @@ int main()
 	t.mark_board(position);
 	t.display_board();
 	}while(!t.game_over());
+
+
+	//string x = t.get_winner;
+	cout<<"The winner is "<<t.get_winner()<<". \n";
+}
+	else		
+	{
+		cout<<"It's okay if you're a terrible player but oh well.";
+		return 0;
+	} 
+		
+
+	
+	
+
+	cout<<"Would you like to play another game?\n";
+	cin>>answer;
+
+
+	} while (answer == "Y" || answer == "y");
 
 	return 0;
 }

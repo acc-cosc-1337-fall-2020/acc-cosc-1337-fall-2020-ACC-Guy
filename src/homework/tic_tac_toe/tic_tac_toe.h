@@ -17,6 +17,10 @@ public: //access specifier - Makes class function available to users of the clas
     string get_player() const {return player;}
     void display_board() const;
     
+    /*** Homework 6 ***/
+    string get_winner() const {return winner;}
+    
+//friend ostream& operator << (ostream& os, const Tic_Tac_Toe& t){os<<t.get_winner;}
 
 private: //access specifier - Hides variables from users of the class. 
     string player;
@@ -24,14 +28,16 @@ private: //access specifier - Hides variables from users of the class.
     bool check_board_full();
     void clear_board();
     vector<string> peg{9," "};
+
+    /*** Homework 6 ***/
+    bool check_column_win();
+    bool check_row_win();
+    bool check_diagonal_win();
+    void set_winner();
+
+    string winner;
+
+
 };
-
-// tic_tac_toe::tic_tac_toe(/* args */)
-// {
-// }
-
-// tic_tac_toe::~tic_tac_toe()
-// {
-// }
 
 #endif
